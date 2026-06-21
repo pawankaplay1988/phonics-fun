@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonics Fun — Learn Letter Sounds!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🎨 Phonics Fun!</h1>
+        <p class="subtitle">Tap a letter to learn its sound</p>
+    </header>
+
+    <main>
+        <section id="letter-grid" class="letter-grid"></section>
+
+        <section id="letter-detail" class="letter-detail hidden">
+            <button class="back-btn" id="back-btn">← Back to Letters</button>
+
+            <div class="detail-header">
+                <button class="nav-btn" id="prev-btn">◀</button>
+                <div class="big-letter-container">
+                    <span class="big-letter" id="big-letter"></span>
+                    <span class="big-letter-lower" id="big-letter-lower"></span>
+                </div>
+                <button class="nav-btn" id="next-btn">▶</button>
+            </div>
+
+            <div class="phoneme-section">
+                <span class="phoneme-label" id="phoneme-label"></span>
+                <span class="phoneme-name" id="phoneme-name"></span>
+                <button class="phoneme-play-btn" id="phoneme-play-btn" title="Hear the phonics sound">
+                    🔊 Play Sound
+                </button>
+            </div>
+
+            <p class="audio-status hidden" id="audio-status">🔊 Using voice fallback — add audio files for best results</p>
+
+            <h3 class="examples-heading">Example Words</h3>
+            <div class="word-cards" id="word-cards"></div>
+
+            <div class="print-section">
+                <h3>🖨️ Print Flashcards</h3>
+                <div class="print-options">
+                    <label>Card Size:</label>
+                    <select id="card-size">
+                        <option value="small">Small</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                    <button class="print-btn" id="print-current-btn">Print This Letter</button>
+                    <button class="print-btn print-all-btn" id="print-all-btn">Print All A–Z</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="print-area" class="print-area"></div>
+    </main>
+
+    <footer>
+        <p>Made with ❤️ for little learners</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
